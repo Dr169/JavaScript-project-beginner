@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cssreset-meyers.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="nav-botton"><a href="#">Dashboard</a></div>
+            <div class="nav-botton"><a href="#">Blog</a></div>
+            <div class="nav-botton"><a href="#">Products</a></div>
+            <div class="nav-botton"><a href="#">Account</a></div>
+            <div class="nav-botton"><a href="#">Setting</a></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="country-selector">
+                <select name="countries" id="countries" class="country-selector-botton"></select>
+            </div>
+            <div class="country-name"><h1 id="country-name"></h1></div>
+            <div class="flag">
+                <img src="" alt="" id="flag" style="height: 200px;width:321.33px">
+            </div>
+            <div class="single-country-data">
+                <div class="country-population">Population :<h2 id="country-population"></h2></div>
+                <div class="country-area">Area :<h2 id="country-area"></h2></div>
+                <div class="country-map">Map :<a href="" id="country-map" target="_blank">Go to map</a></div>
+            </div>
+            <div class="population-chart"><canvas id="myChart" style="width:100%;height: 100%;"></canvas></div>
+        </div>     
+    </main>
+    
+</body>
+<script type="module" src="index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</html>
