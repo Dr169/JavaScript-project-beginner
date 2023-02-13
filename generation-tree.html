@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">enter your generation :</label>
+        <input type="text" id="generation" name="generation" title="a">
+        <label for="fname">enter your sex :</label>
+        <input type="text" id="sex" name="sex" title="a">
+    </form>
+    <button onclick="printGeneration()">click me to Find the generation!!!</button>
+    <p id="generation-tree"></p>
+    <script>
+        function generation(generation,sex) {
+            const generationTree = {
+                '-3': { 'm': "great grandfather", 'f': "great grandmother" },
+                '-2': { 'm': "grandfather", 'f': "grandmother" },
+                '-1': { 'm': "father", 'f': "mother" },
+                '0': { 'm': "me", 'f': "me" },
+                '1': { 'm': "son", 'f': "daughter" },
+                '2': { 'm': "grandson", 'f': "granddaughter" },
+                '3': { 'm': "great grandson", 'f': "great granddaughter" },
+            };
+            return generationTree[generation][sex]
+        }
+
+        function printGeneration(){
+            const gene = document.getElementById('generation').value;
+            const sex = document.getElementById('sex').value;
+            document.getElementById('generation-tree').innerText = generation(gene,sex)
+        }
+    </script>
+</body>
+</html>

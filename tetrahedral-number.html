@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">enter your number :</label>
+        <input type="number" id="num" name="num" title="a">
+    </form>
+    <button onclick="printTetrahedral()">click me to Find the nth Tetrahedral Number!!!</button>
+    <p id="tetrahedral-number"></p>
+    <script>
+        function tetrahedral(number){
+            let sum = 0
+            for (let step = 1; step <= number; step++){
+                sum += (step*(step+1))/2;
+            }
+            return(sum)
+        }
+
+        function printTetrahedral(){
+            const tetrahedralNumber = document.getElementById('num').value;
+            document.getElementById('tetrahedral-number').innerHTML = tetrahedral(tetrahedralNumber)
+        }
+    </script>
+</body>
+</html>

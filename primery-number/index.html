@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Asap:400,700"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="cssreset-meyers.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="form" class="container">
+        <h1 id="tittle">Primery Number</h1>
+        <input
+          autocomplete="off"
+          id="input"
+          type="number"
+          placeholder="enter your number here..."
+        />
+        <button onclick="primaryNumber()">check!</button>
+        <p id="numbers"></p>
+        <button onclick="firstDigitsRate()">What about rates!</button>
+        <div class="rate-container">
+            <div class="rate">1 Rate</div>
+            <div class="rate">3 Rate</div>
+            <div class="rate">7 Rate</div>
+            <div class="rate">9 Rate</div>
+        </div>
+        
+        <div class="rate-container2">
+            <div class="rate2"><h2 id="rate1"></h2></div>
+            <div class="rate2"><h2 id="rate3"></h2></div>
+            <div class="rate2"><h2 id="rate7"></h2></div>
+            <div class="rate2"><h2 id="rate9"></h2></div>
+        </div>
+      </div>
+      
+    </header>
+  </body>
+  <script src="javas.js"></script>
+</html>
